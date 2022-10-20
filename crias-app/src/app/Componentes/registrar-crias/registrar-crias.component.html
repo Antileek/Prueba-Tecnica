@@ -1,0 +1,25 @@
+<div class="container bg-light shadow-lg rounded mt-4">
+    <h4 class=" pt-4 ">Registrar Crias</h4>
+
+    <form ng-submit="registrar()">
+        <label class="form-label">Nombre de la Cria</label>
+        <input [(ngModel)]="cria.Nombre" type="text" class="form-control" name="nombre">
+        <div class="container p-0">
+        <label class="form-label mt-2" for="Proveedores">Nombre del proveedor:</label>
+        <select [(ngModel)]="cria.IdProveedor" name="Proveedores" id="Proveedores" class="mx-2">
+            <option *ngFor="let proveedor of proveedores" value="{{proveedor.ID}}">{{proveedor.Nombre}}</option>
+        </select>
+    </div>
+        <label class="form-label">Peso</label>
+        <input min="1" [(ngModel)]="cria.Peso" type="number" class="form-control" name="nombre">
+        <label class="form-label">Costo</label>
+        <input min="0" [(ngModel)]="cria.Costo" type="number" class="form-control" name="nombre">
+        <label class="form-label">Descripcion</label>
+        <input [(ngModel)]="cria.Descripcion" type="text" class="form-control" name="nombre">
+        <label class="form-label">ColorMusculo</label>
+        <input min="1" max="7" [(ngModel)]="cria.ColorMusculo" type="text" class="form-control" name="nombre">
+        <label class="form-label">CalidadMarmoleo</label>
+        <input min="1" max="5" [(ngModel)]="cria.CalidadMarmoleo" type="text" class="form-control" name="nombre">
+        <button type="button" (click)="registrar()" class="btn btn-primary my-3">Agregar</button>
+    </form>
+</div>

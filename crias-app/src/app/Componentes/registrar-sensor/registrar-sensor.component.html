@@ -1,0 +1,17 @@
+<div class="container bg-light shadow-lg rounded mt-4">
+    <h4 class="mx-4 pt-4">Registrar Sensor</h4>
+
+    <div class="container">
+        <form ng-submit="registrar()">
+            <label class="form-label">Frecuencia Cardiaca</label>
+            <input [(ngModel)]="sensor.FreCardiaca" type="number" class="form-control" name="nombre">
+            <label class="form-label">Presion Sanguinea</label>
+            <input [(ngModel)]="sensor.PreSanguinea" type="number" class="form-control" name="nombre">
+            <label class="form-label">Frecuencia Respiratoria</label>
+            <input [(ngModel)]="sensor.FreRespiratoria" type="number" class="form-control" name="nombre">
+            <label class="form-label">Temperatura</label>
+            <input [(ngModel)]="sensor.Temperatura" type="number" class="form-control" name="nombre">
+            <button type="button" (click)="registrar()" class="btn btn-primary my-3">Agregar</button>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,9 @@
+<div class="container mt-4">
+    <h4>Editar Proveedor</h4>
+
+    <form ng-submit="editar()">
+        <label class="form-label p-1">Nombre del proveedor</label>
+        <input [(ngModel)]="proveedor.Nombre" type="text" class="form-control p-1" name="Nombre">
+        <button type="button" (click)="editar()" class="btn btn-primary mt-2 ">Editar</button>
+    </form>
+</div>

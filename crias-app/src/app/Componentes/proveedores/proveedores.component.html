@@ -1,0 +1,23 @@
+<div class="container mt-4">
+    <button type="button" routerLink="/proveedores/registrar" class="btn btn-outline-success my-2"><i class="bi bi-plus-circle mx-1"></i>Registrar</button>
+
+    <table id="productSizes" class="table table-dark table-striped">
+
+        <thead>
+            <tr>
+            <th scope="w-25">Numero</th>
+            <th class="w-50" scope="col">Nombre</th>
+            <th scope="col">Editar</th>
+            <th scope="col">Eliminar</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let proveedor of proveedores, let i = index">
+                <th>{{i + 1}}</th>
+                <th>{{proveedor.Nombre}}</th>
+                <th><button (click)="editarProveedor(proveedor.ID)"  type="button" class="btn btn-outline-primary"><i class="bi bi-pencil-square m-2"></i>Editar</button></th>
+                <th><button (click)="eliminarProveedor(proveedor.ID)"  type="button" class="btn btn-outline-danger"><i class="bi bi-trash m-2"></i>Eliminar</button></th>
+            </tr>
+        </tbody>
+    </table>
+</div>

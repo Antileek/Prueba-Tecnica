@@ -1,0 +1,9 @@
+<div class="container bg-light shadow-lg rounded mt-4">
+    <h4>Registrar Proveedor</h4>
+
+    <form ng-submit="registrar()">
+        <label class="form-label"> Nombre del proveedor</label>
+        <input [(ngModel)]="proveedor.Nombre" type="text" class="form-control" name="nombre">
+        <button type="button" (click)="registrar()" class="btn btn-primary my-3">Agregar</button>
+    </form>
+</div>
